@@ -9,6 +9,6 @@ import com.example.demo.module.Users;
 
 @Repository
 public interface UserReposetory extends JpaRepository<Users, Long> {
-    @Query("SELECT CASE WHEN COUNT(u) > 0 THEN TRUE ELSE FALSE END FROM Users u WHERE u.email = :email")
-    public boolean checkEmailUsing(String email);
+    boolean existsByEmail(String email);
 }
+
