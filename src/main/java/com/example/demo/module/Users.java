@@ -14,8 +14,17 @@ public class Users {
 
     private String name;
     private String email;
+    private String password;
 
-    // Getters and Setters
+    public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	// Getters and Setters
     public Long getId() {
         return id;
     }
